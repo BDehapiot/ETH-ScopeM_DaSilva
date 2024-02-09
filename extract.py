@@ -10,9 +10,9 @@ from skimage.transform import downscale_local_mean
 # Paths
 local_path = Path("D:\local_DaSilva\data")
 trn_img_path = Path(Path.cwd(), "data", "train_images")
-trn_msk_path = Path(Path.cwd(), "data", "train_masks")
-tst_img_path = Path(Path.cwd(), "data", "test_images")
-tst_msk_path = Path(Path.cwd(), "data", "test_masks")
+trn_msk_path = Path(Path.cwd(), "data", "train_masks" )
+tst_img_path = Path(Path.cwd(), "data", "test_images" )
+tst_msk_path = Path(Path.cwd(), "data", "test_masks"  )
 msk_paths = list(local_path.glob("*_mask.tif"))
 nMsk = len(msk_paths)
 
