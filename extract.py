@@ -3,7 +3,7 @@
 import numpy as np
 from skimage import io
 from pathlib import Path
-from skimage.transform import downscale_local_mean
+from functions import preprocess
 
 #%% Inputs --------------------------------------------------------------------
 
@@ -38,16 +38,10 @@ for i, path in enumerate(msk_paths):
     # Open data
     msk = io.imread(path)
     img = io.imread(str(path).replace("_mask", ""))
-        
-    # Downscale mask and image
-    msk = (downscale_local_mean(msk, downscale_factor) >= 1).astype("float")
-    img = downscale_local_mean(img, downscale_factor)
     
-    # Normalize image
-    pMax = np.percentile(img, 99.9)
-    img[img > pMax] = pMax
-    img = (img / pMax).astype(float)
-    
+    # Preprocessing
+    img, msk = preprocess(img, msk=msk, downscale_factor=downscale_factor)
+            
     # Save data
     name = path.name.replace("_mask", "")
     if (trnIdx == i).any():

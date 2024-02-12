@@ -14,12 +14,10 @@ dependencies:
   - opencv
   - joblib
   - matplotlib-base
-  - cudatoolkit=11.2
-  - cudnn=8.1
   - spyder
   - pip
   - pip:
     - napari[all]
     - albumentations
     - segmentation-models
-    - tensorflow-gpu==2.10
+    - tensorflow==2.10
