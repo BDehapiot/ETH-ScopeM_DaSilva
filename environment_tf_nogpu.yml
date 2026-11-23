@@ -1,4 +1,4 @@
-name: DaSilva
+name: DaSilvaTest
 
 channels:
   - conda-forge
@@ -11,7 +11,7 @@ dependencies:
   - scipy
   - pandas
   - scikit-image
-  - opencv
+  - opencv=4.8.0
   - scikit-learn
   - joblib
   - matplotlib-base
@@ -28,3 +28,5 @@ dependencies:
     - albumentations
     - segmentation-models
     - tensorflow==2.10
+    - h5py==3.11.0
+    - numpy>=1.24,<1.25

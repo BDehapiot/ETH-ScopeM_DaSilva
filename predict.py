@@ -14,7 +14,7 @@ data_path  = Path(Path.cwd(), "data")
 model_path = Path(Path.cwd(), "model_weights.h5")
 paths = [
     path for path in data_path.glob("*.tif") 
-    if 'prediction' not in path.name
+    if "prediction" not in path.name
     ]
 
 # Parameters
@@ -31,16 +31,16 @@ if vram:
 
 # Define & compile model
 model = sm.Unet(
-    'resnet34', 
+    "resnet34", 
     input_shape=(None, None, 1), 
     classes=1, 
-    activation='sigmoid', 
+    activation="sigmoid", 
     encoder_weights=None,
     )
 model.compile(
-    optimizer='adam',
-    loss='binary_crossentropy', 
-    metrics=['mse']
+    optimizer="adam",
+    loss="binary_crossentropy", 
+    metrics=["mse"]
     )
 
 # Load weights

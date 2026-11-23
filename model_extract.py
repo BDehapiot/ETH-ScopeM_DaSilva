@@ -23,10 +23,6 @@ np.random.seed(42)
 
 #%% Extract -------------------------------------------------------------------
 
-'''
-- Formated for ZeroCostDL4Mic
-'''
-
 # Train and test idx
 idx = np.random.randint(0, nMsk, nMsk)
 nTrn = nMsk - int(np.floor(nMsk * (tst_split)))
