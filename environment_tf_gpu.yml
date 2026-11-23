@@ -1,4 +1,4 @@
-name: DaSilvaTest
+name: DaSilva
 
 channels:
   - conda-forge

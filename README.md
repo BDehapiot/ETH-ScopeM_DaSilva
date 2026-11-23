@@ -41,9 +41,9 @@ mamba env create -f environment_tf_nogpu.yml
 ```  
 - Activate Conda environment:
 ```bash
-conda activate DaSilvaTest
+conda activate DaSilva
 ```
-Your prompt should now start with `(DaSilvaTest)` instead of `(base)`
+Your prompt should now start with `(DaSilva)` instead of `(base)`
 
 </details> 
 
@@ -77,9 +77,9 @@ mamba env create -f environment_tf_nogpu.yml
 ```  
 - Activate Conda environment:  
 ```bash
-conda activate DaSilvaTest
+conda activate DaSilva
 ```
-Your prompt should now start with `(DaSilvaTest)` instead of `(base)`
+Your prompt should now start with `(DaSilva)` instead of `(base)`
 
 </details>
 
